@@ -82,3 +82,26 @@ if (birthMonth === currentMonth) {
     `You are ${age - 1} years old. Your birthday is ${month === 1 ? "next month" : `in around ${month} months`}!`,
   );
 }
+
+const foods = ["Avocado", "Ramen", "Pain au Chocolate"];
+let student = {
+  name: firstName,
+  favouriteNumber: favouriteNumber,
+  likesCoding: likesCoding,
+  foods: foods,
+};
+console.log(student);
+student.nationality = "French";
+student.lastName = "Saunders";
+student.foods[2] = "Salmon";
+console.log(student);
+console.log("Foods: " + student["foods"].join(", "));
+console.log("Nationality: " + student.nationality);
+
+const cat = Object.create(student);
+cat.firstName = "Raspy";
+cat.favouriteNumber = "TBD";
+cat.likesCoding = false;
+cat.foods = ["tuna", "wet foot", "chicken"];
+
+console.log(cat);
